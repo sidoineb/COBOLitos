@@ -6,7 +6,7 @@
 ## Description
 
 COBOLitos-Quantum est un projet singulier de boite à outils autour de différents calculs quantiques de base.
-Il est écrit en COBOL pour sa partie frontend, et en Python pour sa partie backend (Car COBOL ne permet pas le calcul de matrice, ni de nombres complexes).
+Il est écrit en COBOL pour sa partie frontend, et en Python pour sa partie backend (Car COBOL ne permet pas le calcul de matrices, ni de nombres complexes).
 
 ## License
 
