@@ -19,6 +19,7 @@ Modules Python requis :
 - Numpy
 
 **Pour Linux :**
+
 ```bash
 sudo apt-get install python3-flask python3-numpy
 ```
@@ -31,4 +32,5 @@ et enfin, lancez le script Run_quantum.sh:
 ./Run_quantum.sh
 ```
 **Pour Windows :**
+
 Lancez Run_quantum.bat
