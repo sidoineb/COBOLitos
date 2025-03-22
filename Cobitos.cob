@@ -36,7 +36,7 @@
            DISPLAY "Entrez le deuxième qubit (0 ou 1) : ".
            ACCEPT QUBIT-2.
 
-           STRING "python3 quantum_tensor.py " QUBIT-1 " " QUBIT-2 
+           STRING "python3 Quantum_tensor.py " QUBIT-1 " " QUBIT-2 
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
@@ -49,7 +49,7 @@
            DISPLAY "Entrez le deuxième qubit (0 ou 1) : ".
            ACCEPT QUBIT-2.
 
-           STRING "python3 quantum_intrication.py " QUBIT-1 " " QUBIT-2 
+           STRING "python3 Quantum_intrication.py " QUBIT-1 " " QUBIT-2 
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
