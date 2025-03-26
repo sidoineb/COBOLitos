@@ -7,6 +7,12 @@
        01 QUBIT-1 PIC X.
        01 QUBIT-2 PIC X.
        01 CMD-LINE PIC X(100).
+       01 RESULT-LINE PIC X(200).
+       01 RESULT-FILE PIC X(20) VALUE "result.txt".
+
+       FILE SECTION.
+       FD RESULT-TEXT-FILE.
+       01 RESULT-RECORD PIC X(200).
 
        PROCEDURE DIVISION.
        MAIN-MENU.
@@ -51,6 +57,7 @@
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
+           PERFORM AFFICHER-RESULTAT.
            PERFORM MAIN-MENU.
 
        CALCULER-INTRICATION.
@@ -63,6 +70,7 @@
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
+           PERFORM AFFICHER-RESULTAT.
            PERFORM MAIN-MENU.
 
        CALCULER-HADAMARD.
@@ -73,6 +81,7 @@
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
+           PERFORM AFFICHER-RESULTAT.
            PERFORM MAIN-MENU.
 
        CALCULER-PAULI-X.
@@ -83,6 +92,7 @@
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
+           PERFORM AFFICHER-RESULTAT.
            PERFORM MAIN-MENU.
 
        CALCULER-PAULI-Z.
@@ -93,6 +103,7 @@
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
+           PERFORM AFFICHER-RESULTAT.
            PERFORM MAIN-MENU.
 
        CALCULER-CNOT.
@@ -105,4 +116,11 @@
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
+           PERFORM AFFICHER-RESULTAT.
            PERFORM MAIN-MENU.
+
+       AFFICHER-RESULTAT.
+           OPEN INPUT RESULT-TEXT-FILE.
+           READ RESULT-TEXT-FILE INTO RESULT-LINE.
+           DISPLAY "🔹 Résultat : " RESULT-LINE.
+           CLOSE RESULT-TEXT-FILE.

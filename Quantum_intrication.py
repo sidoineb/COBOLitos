@@ -22,3 +22,10 @@ if __name__ == "__main__":
     else:
         q1, q2 = sys.argv[1], sys.argv[2]
         print(bell_state(q1, q2))
+
+    # Écriture du résultat dans un fichier
+    with open("result.txt", "w") as f:
+        f.write(output)
+
+    # Affichage pour debug (pas nécessaire en COBOL)
+    print(output)

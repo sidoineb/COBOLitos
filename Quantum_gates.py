@@ -37,3 +37,10 @@ if __name__ == "__main__":
         gate = sys.argv[1]
         qubits = sys.argv[2:]
         print(apply_gate(gate, qubits))
+
+        # Écriture du résultat dans un fichier
+    with open("result.txt", "w") as f:
+        f.write(output)
+
+    # Affichage pour debug (pas nécessaire en COBOL)
+    print(output)

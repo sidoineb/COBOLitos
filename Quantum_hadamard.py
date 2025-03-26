@@ -27,3 +27,10 @@ if __name__ == "__main__":
     else:
         qubit = sys.argv[1]
         print(apply_hadamard(qubit))
+
+    # Écriture du résultat dans un fichier
+    with open("result.txt", "w") as f:
+        f.write(output)
+
+    # Affichage pour debug (pas nécessaire en COBOL)
+    print(output)
