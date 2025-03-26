@@ -41,11 +41,45 @@
                    PERFORM MAIN-MENU
            END-EVALUATE.
 
+       CALCULER-TENSOR.
+           DISPLAY "Entrez le premier qubit (0 ou 1) : ".
+           ACCEPT QUBIT-1.
+           DISPLAY "Entrez le deuxième qubit (0 ou 1) : ".
+           ACCEPT QUBIT-2.
+
+           STRING "python3 Quantum_tensor.py " QUBIT-1 " " QUBIT-2
+               INTO CMD-LINE.
+
+           CALL "SYSTEM" USING CMD-LINE.
+           PERFORM MAIN-MENU.
+
+       CALCULER-INTRICATION.
+           DISPLAY "Entrez le premier qubit (0 ou 1) : ".
+           ACCEPT QUBIT-1.
+           DISPLAY "Entrez le deuxième qubit (0 ou 1) : ".
+           ACCEPT QUBIT-2.
+
+           STRING "python3 Quantum_intrication.py " QUBIT-1 " " QUBIT-2
+               INTO CMD-LINE.
+
+           CALL "SYSTEM" USING CMD-LINE.
+           PERFORM MAIN-MENU.
+
+       CALCULER-HADAMARD.
+           DISPLAY "Entrez un qubit (0 ou 1) : ".
+           ACCEPT QUBIT-1.
+
+           STRING "python3 Quantum_hadamard.py " QUBIT-1
+               INTO CMD-LINE.
+
+           CALL "SYSTEM" USING CMD-LINE.
+           PERFORM MAIN-MENU.
+
        CALCULER-PAULI-X.
            DISPLAY "Entrez un qubit (0 ou 1) : ".
            ACCEPT QUBIT-1.
 
-           STRING "python3 quantum_gates.py X " QUBIT-1
+           STRING "python3 Quantum_gates.py X " QUBIT-1
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
@@ -55,7 +89,7 @@
            DISPLAY "Entrez un qubit (0 ou 1) : ".
            ACCEPT QUBIT-1.
 
-           STRING "python3 quantum_gates.py Z " QUBIT-1
+           STRING "python3 Quantum_gates.py Z " QUBIT-1
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
@@ -67,7 +101,7 @@
            DISPLAY "Entrez le deuxième qubit (0 ou 1) : ".
            ACCEPT QUBIT-2.
 
-           STRING "python3 quantum_gates.py CNOT " QUBIT-1 " " QUBIT-2
+           STRING "python3 Quantum_gates.py CNOT " QUBIT-1 " " QUBIT-2
                INTO CMD-LINE.
 
            CALL "SYSTEM" USING CMD-LINE.
