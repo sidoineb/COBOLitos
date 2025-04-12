@@ -73,6 +73,20 @@
            END-EVALUATE.
            DISPLAY " ".
 
+       EFFET-ASCII-PORTE.
+           DISPLAY " ".
+           DISPLAY "Application de la porte quantique en cours...".
+           DISPLAY " ".
+           CALL "CBL_OC_SLEEP" USING BY VALUE 400000
+           DISPLAY "|ψ⟩  --->  [·]       "
+           CALL "CBL_OC_SLEEP" USING BY VALUE 300000
+           DISPLAY "|ψ⟩  --->  [··]      "
+           CALL "CBL_OC_SLEEP" USING BY VALUE 300000
+           DISPLAY "|ψ⟩  --->  [···]     "
+           CALL "CBL_OC_SLEEP" USING BY VALUE 300000
+           DISPLAY "|ψ⟩  --->  [⚡]  --->  |ψ'⟩"
+           DISPLAY " ".
+
        CALCULER-TENSOR.
            DISPLAY "Entrez le premier qubit (0 ou 1) : ".
            ACCEPT QUBIT-1.
@@ -107,6 +121,7 @@
            DISPLAY "Entrez un qubit (0 ou 1) : ".
            ACCEPT QUBIT-1.
            PERFORM AFFICHER-QUBIT.
+           PERFORM EFFET-ASCII-PORTE.
 
            STRING "python3 Quantum_hadamard.py " QUBIT-1
                INTO CMD-LINE.
